@@ -63,8 +63,10 @@ app.get('/weather', (req, res) => {
   })
 })
 
+geocode('odesa', console.log);
+
 app.get('*', (req, res) => {
-  res.send('Sorry, no page was found by this address')
+  res.render('404');
 })
 
 app.listen(3000, () => {
