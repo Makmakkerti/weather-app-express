@@ -44,12 +44,22 @@ app.get('/about', (req, res) => {
 app.get('/weather', (req, res) => {
   if(!req.query.address) {
     return res.send({
-      error: 'Adress not defined',
+      error: 'Address is not defined',
     });
   }
 
-  res.send({
-    location: req.query.address
+  geocode(req.query.address, (err, data) => {
+    if (err) {
+      return res.send({err});
+    }
+
+    forecast(data, (forecastErr, forecastData) => {
+      if (forecastErr) {
+        return res.send({forecastErr});
+      }
+
+      res.send(forecastData);
+    });
   })
 })
 
