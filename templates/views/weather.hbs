@@ -1,9 +1,26 @@
 {{>head}}
-<h1>Weather</h1>
+<h1>Weather Checker</h1>
+
 {{>header}}
-<p>Use this app to check wheather by providing your address</p>
-<form>
-  <input type="text" name='address' id='search'>
+
+<p>Please enter your country/city to check weather in your area</p>
+<form id='searchForm'>
+  <input type="text" name='address' id='search' placeholder="New York">
   <button type="submit">Search</button>
 </form>
+
+<article class="widget">
+  <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+  <div class="weatherInfo">
+    <div class="temperature"><span>25&deg;</span></div>
+    <div class="description">    
+      <div class="weatherCondition">CLOUDY</div>    
+      <div class="place">New York, New York</div>
+    </div>
+  </div>
+  <div class="date">1st Jan</div>
+</article>
+
+<p id="error"></p>
+<p id="location"></p>
 {{>footer}}

@@ -63,8 +63,6 @@ app.get('/weather', (req, res) => {
   })
 })
 
-geocode('odesa', console.log);
-
 app.get('*', (req, res) => {
   res.render('404');
 })
