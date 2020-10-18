@@ -130,7 +130,7 @@ body {
 }
 .widget .weatherInfo .description .weatherCondition {
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 100;
 }
 .widget .weatherInfo .description .place {

@@ -42,7 +42,7 @@ weatherForm.addEventListener('submit', (e) => {
           } else {
             dataContainer.textContent = '';
 
-            const { country, name } = data.location;
+            const { country } = data.location;
             const { temperature, weather_icons,
               weather_descriptions, wind_speed,
               pressure, humidity, feelslike, uv_index, cloudcover } = data.current;
@@ -50,7 +50,7 @@ weatherForm.addEventListener('submit', (e) => {
             wIcon.innerHTML = `<img src="${weather_icons[0]}" />`;
             wTemperature.innerHTML = `<span>${temperature}°</span>`;
             wCondition.textContent = weather_descriptions[0];
-            wPlace.textContent = `${country}, ${name}`;
+            wPlace.textContent = `${country}, ${search.value}`;
 
             wFeelslike.textContent = feelslike
             wPressure.textContent = pressure;
