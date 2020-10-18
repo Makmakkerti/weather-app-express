@@ -1,6 +1,10 @@
 # Weather App by Makmakkerti
 ## Shows weather accroding to entered location
 
+## Inastallation process:
+- npm install
+- npm run dev
+
 ### Technologies used:
 - NodeJS
 - Express
