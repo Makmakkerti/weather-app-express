@@ -1,17 +1,12 @@
-// http://api.weatherstack.com/current?access_key=e393bc61e5b38b564ff1af081b34071a&query=46.4598865,30.5717043
-// pk.eyJ1IjoibWFrbWFra2VydGkiLCJhIjoiY2tnN3ZvZnQ3MDR0OTMybXlkMW02MmU1eCJ9.8GeFQHMsWm3K7tetLF_08g
-const fs = require('fs');
 const path = require('path');
 const express = require('express');
+
 const hbs = require('hbs');
-const request = require('postman-request');
 const geocode = require('../utils/geocode');
 const forecast = require('../utils/forecast');
 
-
-const mapboxUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/odesa.json?access_token=pk.eyJ1IjoibWFrbWFra2VydGkiLCJhIjoiY2tnN3ZvZnQ3MDR0OTMybXlkMW02MmU1eCJ9.8GeFQHMsWm3K7tetLF_08g&limit=1'
-
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define path for directories
 const publicDirPath = path.join(__dirname, '../public');
@@ -67,8 +62,8 @@ app.get('*', (req, res) => {
   res.render('404');
 })
 
-app.listen(3000, () => {
-  console.log('Server was started on port 3000');
+app.listen(port, () => {
+  console.log(`Server was started on ${port} port`);
 });
 
 
