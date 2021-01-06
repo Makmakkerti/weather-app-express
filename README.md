@@ -1,6 +1,9 @@
 # Weather App by Makmakkerti
 ## Shows weather accroding to entered location
 
+## Deployed app
+- https://makmakkerti-weather-app.herokuapp.com/
+
 ## Inastallation process:
 - npm install
 - npm run dev
