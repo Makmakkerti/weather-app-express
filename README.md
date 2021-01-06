@@ -2,7 +2,7 @@
 ## Shows weather accroding to entered location
 
 ## Deployed app
-- https://makmakkerti-weather-app.herokuapp.com/
+- [On Heroku](https://makmakkerti-weather-app.herokuapp.com/)
 
 ## Inastallation process:
 - npm install
